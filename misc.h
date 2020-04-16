@@ -1,7 +1,8 @@
 #ifndef MISC_H_INCLUDED
 #define MISC_H_INCLUDED
 
-typedef struct Arrays {
+typedef struct Arrays
+{
     char **src;
     char **tgt;
 } Arrays;
