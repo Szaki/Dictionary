@@ -87,7 +87,7 @@ void search(FILE *fp)
     gets(searched);
     if (strlen(searched) == 0)
     {
-        befejez(fp, searched, k, db);
+        end(fp, searched, k, db);
         return;
     }
 
@@ -105,7 +105,7 @@ void search(FILE *fp)
         };
     };
 
-    if (haveresult == false)
+    if (!haveresult)
     {
         printf("No result.\n\n");
     };
@@ -135,7 +135,7 @@ void edit(FILE *fp, char *string)
     if (strlen(newword) == 0)
     {
         printf("\nFile edited.\n");
-        befejez(fp, newword, k, db);
+        end(fp, newword, k, db);
         return;
     }
 
@@ -195,7 +195,7 @@ void edit(FILE *fp, char *string)
         };
     };
 
-    if (haveresult == false)
+    if (!haveresult)
     {
         fprintf(fp, newword);
         free(newword);
